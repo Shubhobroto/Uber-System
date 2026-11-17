@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/* Tailwind v4 resets buttons to the default arrow cursor; every clickable control should show the hand. */
+@layer base {
+  button:not(:disabled),
+  select,
+  label:has(input[type="checkbox"]),
+  input[type="checkbox"] {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+  }
+}
+
+@keyframes robot-blink {
+  0%, 92%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.1); }
+}
+
+@keyframes robot-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes robot-wave {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-25deg); }
+}
+
+@keyframes antenna-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+.robot-eye {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: robot-blink 4s infinite;
+}
+
+.robot-bob {
+  animation: robot-bob 2.4s ease-in-out infinite;
+}
+
+.robot-wave {
+  transform-box: fill-box;
+  transform-origin: top center;
+  animation: robot-wave 1.2s ease-in-out 3;
+}
+
+.antenna-light {
+  animation: antenna-pulse 1.4s ease-in-out infinite;
+}

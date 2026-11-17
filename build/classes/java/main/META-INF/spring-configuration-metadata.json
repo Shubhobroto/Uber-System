@@ -1,0 +1,51 @@
+{
+  "groups": [
+    {
+      "name": "app.matching",
+      "type": "com.example.Uber.configuration.MatchingProperties",
+      "sourceType": "com.example.Uber.configuration.MatchingProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "app.matching.driver-stale-after",
+      "type": "java.time.Duration",
+      "sourceType": "com.example.Uber.configuration.MatchingProperties",
+      "defaultValue": "30s"
+    },
+    {
+      "name": "app.matching.max-candidates",
+      "type": "java.lang.Integer",
+      "sourceType": "com.example.Uber.configuration.MatchingProperties",
+      "defaultValue": 20
+    },
+    {
+      "name": "app.matching.max-radius-km",
+      "type": "java.lang.Double",
+      "sourceType": "com.example.Uber.configuration.MatchingProperties",
+      "defaultValue": 25
+    },
+    {
+      "name": "app.matching.offer-timeout",
+      "type": "java.time.Duration",
+      "sourceType": "com.example.Uber.configuration.MatchingProperties",
+      "defaultValue": "10s"
+    },
+    {
+      "name": "app.matching.search-radii-km",
+      "type": "java.util.List<java.lang.Double>",
+      "sourceType": "com.example.Uber.configuration.MatchingProperties",
+      "defaultValue": "[2.0, 5.0, 10.0]"
+    },
+    {
+      "name": "app.matching.session-ttl",
+      "type": "java.time.Duration",
+      "sourceType": "com.example.Uber.configuration.MatchingProperties",
+      "defaultValue": "10m"
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}

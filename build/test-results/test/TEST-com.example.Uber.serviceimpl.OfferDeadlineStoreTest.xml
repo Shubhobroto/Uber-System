@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.Uber.serviceimpl.OfferDeadlineStoreTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-17T13:26:15.502Z" hostname="DTC-5CG434198G" time="0.037">
+  <properties/>
+  <testcase name="claimExpiredReturnsOnlyOffersThisCallerWon()" classname="com.example.Uber.serviceimpl.OfferDeadlineStoreTest" time="0.026"/>
+  <testcase name="claimExpiredIsEmptyWhenNothingIsDue()" classname="com.example.Uber.serviceimpl.OfferDeadlineStoreTest" time="0.004"/>
+  <testcase name="claimSucceedsForOnlyTheCallerThatActuallyRemovedTheOffer()" classname="com.example.Uber.serviceimpl.OfferDeadlineStoreTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.Uber.serviceimpl.MatchingServiceImplTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-11-17T13:26:15.184Z" hostname="DTC-5CG434198G" time="0.177">
+  <properties/>
+  <testcase name="skipsBookingThatIsNoLongerPending()" classname="com.example.Uber.serviceimpl.MatchingServiceImplTest" time="0.035"/>
+  <testcase name="freesThePreviousDriverWhenTheOfferMovesOn()" classname="com.example.Uber.serviceimpl.MatchingServiceImplTest" time="0.011"/>
+  <testcase name="cancelsOnlyAfterTheWidestRingHasBeenTried()" classname="com.example.Uber.serviceimpl.MatchingServiceImplTest" time="0.011"/>
+  <testcase name="stopsOfferingWhenEveryRemainingDriverIsReservedElsewhere()" classname="com.example.Uber.serviceimpl.MatchingServiceImplTest" time="0.009"/>
+  <testcase name="widensRadiusUntilDriversAreFoundAndOffersNearestFirst()" classname="com.example.Uber.serviceimpl.MatchingServiceImplTest" time="0.024"/>
+  <testcase name="skipsADriverWhoAlreadyHoldsAnotherPendingOffer()" classname="com.example.Uber.serviceimpl.MatchingServiceImplTest" time="0.008"/>
+  <testcase name="cancelsBookingWhenNoDriverIsAvailableAnywhere()" classname="com.example.Uber.serviceimpl.MatchingServiceImplTest" time="0.006"/>
+  <testcase name="whenEveryoneInTheRingWasAskedTheSearchWidensAndSkipsDriversWhoAlreadySaidNo()" classname="com.example.Uber.serviceimpl.MatchingServiceImplTest" time="0.011"/>
+  <testcase name="endsMatchingWhenTheQueueRunsOut()" classname="com.example.Uber.serviceimpl.MatchingServiceImplTest" time="0.007"/>
+  <testcase name="skipsDriversWhoAreNotAvailable()" classname="com.example.Uber.serviceimpl.MatchingServiceImplTest" time="0.009"/>
+  <testcase name="releasesTheDuplicateGuardWhenSearchFailsSoARetryCanStartOver()" classname="com.example.Uber.serviceimpl.MatchingServiceImplTest" time="0.004"/>
+  <testcase name="ignoresDuplicateDeliveryOfTheSameRideRequest()" classname="com.example.Uber.serviceimpl.MatchingServiceImplTest" time="0.002"/>
+  <system-out><![CDATA[18:56:15.219 [Test worker] INFO com.example.Uber.serviceimpl.MatchingServiceImpl -- Skipping matching, booking is not pending bookingId=1 status=CANCELLED
+18:56:15.232 [Test worker] INFO com.example.Uber.serviceimpl.MatchingServiceImpl -- Offered booking bookingId=1 driverId=3
+18:56:15.248 [Test worker] INFO com.example.Uber.serviceimpl.MatchingServiceImpl -- No driver available, booking cancelled bookingId=1
+18:56:15.263 [Test worker] INFO com.example.Uber.serviceimpl.MatchingServiceImpl -- No driver available, booking cancelled bookingId=1
+18:56:15.278 [Test worker] INFO com.example.Uber.serviceimpl.MatchingServiceImpl -- Found 2 available drivers within 5.0 km bookingId=1
+18:56:15.283 [Test worker] INFO com.example.Uber.serviceimpl.MatchingServiceImpl -- Offered booking bookingId=1 driverId=7
+18:56:15.302 [Test worker] INFO com.example.Uber.serviceimpl.MatchingServiceImpl -- Offered booking bookingId=1 driverId=3
+18:56:15.311 [Test worker] INFO com.example.Uber.serviceimpl.MatchingServiceImpl -- No driver available, booking cancelled bookingId=1
+18:56:15.323 [Test worker] INFO com.example.Uber.serviceimpl.MatchingServiceImpl -- Found 1 available drivers within 5.0 km bookingId=1
+18:56:15.323 [Test worker] INFO com.example.Uber.serviceimpl.MatchingServiceImpl -- Everyone in the previous ring was asked, widening the search bookingId=1 ring=1
+18:56:15.326 [Test worker] INFO com.example.Uber.serviceimpl.MatchingServiceImpl -- Offered booking bookingId=1 driverId=3
+18:56:15.337 [Test worker] INFO com.example.Uber.serviceimpl.MatchingServiceImpl -- No driver available, booking cancelled bookingId=1
+18:56:15.346 [Test worker] INFO com.example.Uber.serviceimpl.MatchingServiceImpl -- Found 1 available drivers within 2.0 km bookingId=1
+18:56:15.350 [Test worker] INFO com.example.Uber.serviceimpl.MatchingServiceImpl -- Offered booking bookingId=1 driverId=2
+18:56:15.362 [Test worker] INFO com.example.Uber.serviceimpl.MatchingServiceImpl -- Matching already started, ignoring duplicate delivery bookingId=1
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

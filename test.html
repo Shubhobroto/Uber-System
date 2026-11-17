@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+</head>
+<body>
+
+<h2>Driver Console</h2>
+
+<script>
+    const socket = new SockJS('http://localhost:8080/ws');
+    const stompClient = Stomp.over(socket);
+
+    stompClient.connect({}, function () {
+
+        console.log("✅ Driver connected");
+
+        stompClient.subscribe('/topic/driver/1', function (message) {
+            console.log("🔥 Driver got request:", message.body);
+        });
+
+    });
+</script>
+
+</body>
+</html>
