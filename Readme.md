@@ -3,7 +3,8 @@
 Spring Boot service that matches a ride request with the nearest available driver.
 Redis GEO finds nearby drivers, RabbitMQ keeps matching off the request path, and WebSockets push offers to drivers.
 
-## How a ride is matched
+## How a ride is matched 
+sdfgsrgsg
 
 ```mermaid
 sequenceDiagram
